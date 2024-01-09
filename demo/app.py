@@ -25,7 +25,7 @@ def convert_message(message):
     else:
         raise ValueError("Invalid role: {}".format(message["role"]))
     # gradio cleaning - it converts stuff to html entities
-    # we would need special handling for where we want to keep the html...
+    # We would need special handling for where we want to keep the html...
     message_text = html.unescape(message_text)
     # it also converts newlines to <br>, undo this.
     message_text = message_text.replace("<br>", "\n")
